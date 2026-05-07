@@ -1,0 +1,9 @@
+<svg width="100%" viewBox="0 0 680 300" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>BC logo</title>
+<desc>Bold italic BC in yellow with star</desc>
+<text x="340" y="225" text-anchor="middle" style="fill:none;stroke:#F5EF5A;stroke-width:18px;stroke-linecap:round;stroke-linejoin:round;font-family:'Arial Rounded MT Bold','Arial Black',sans-serif;font-size:190px;font-weight:900;font-style:italic;">BC</text>
+<text x="340" y="225" text-anchor="middle" style="fill:#F5EF5A;font-family:'Arial Rounded MT Bold','Arial Black',sans-serif;font-size:190px;font-weight:900;font-style:italic;">BC</text>
+<g transform="translate(436, 142)">
+  <path d="M0,-15 L3.75,-3.75 L15,0 L3.75,3.75 L0,15 L-3.75,3.75 L-15,0 L-3.75,-3.75 Z" fill="#F5EF5A"/>
+</g>
+</svg>
