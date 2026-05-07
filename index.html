@@ -37,7 +37,7 @@ nav {
 }
 .nav-logo { display: flex; align-items: center; text-decoration: none; }
 .nav-logo img { height: 110px; width: auto; }
-.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-right { display: flex; align-items: center; gap: 10px; width: 100%; justify-content: flex-end; }
 .nav-right a { color: var(--muted); text-decoration: none; transition: color 0.15s; font-size: 13px; }
 .nav-right a:hover { color: var(--ink); }
 .nav-right svg { width: 28px; height: 28px; display: block; }
@@ -45,7 +45,7 @@ nav {
   display: flex; align-items: center; 
   border: 1.5px solid var(--border); 
   border-radius: 40px; background: var(--card); 
-  overflow: hidden; width: 260px; height: 46px;
+  overflow: hidden; width: 100%; height: 46px;
   cursor: pointer; text-decoration: none;
   flex-shrink: 0;
 }
@@ -177,11 +177,11 @@ nav {
 </head>
 <body>
 
-<div style="max-width:1160px;margin:0 auto;padding:24px 32px 0;display:flex;justify-content:space-between;align-items:flex-start;">
-  <!-- BC logo flush left -->
+<div style="max-width:1160px;margin:0 auto;padding:24px 32px 0;display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:center;">
+  <!-- BC logo flush left — aligns with profile card -->
   <img src="bc_logo_final.svg" alt="BC" style="height:90px;width:auto;display:block;">
-  <!-- nav right -->
-  <div class="nav-right" style="padding-top:8px;">
+  <!-- nav right — aligns with clients & teams card -->
+  <div class="nav-right" style="justify-content:flex-end;">
     <a href="https://www.instagram.com/biancacuriel/" target="_blank" title="Instagram">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
     </a>
