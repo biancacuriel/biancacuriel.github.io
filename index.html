@@ -57,7 +57,7 @@ nav {
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* ── OUTER SHELL ── */
-.page { max-width: 1160px; margin: 0 auto; padding: 0 32px 60px; display: grid; grid-template-columns: 1fr 320px; gap: 20px; align-items: start; }
+.page { max-width: 1160px; margin: 0 auto; padding: 20px 32px 60px; display: grid; grid-template-columns: 1fr 320px; gap: 20px; align-items: start; }
 
 /* ── LEFT: PROFILE CARD + FEED ── */
 .left { display: flex; flex-direction: column; gap: 12px; align-items: stretch; width: 100%; }
@@ -177,10 +177,12 @@ nav {
 </head>
 <body>
 
-<nav>
-  <div style="width:110px"></div>
-  <div class="nav-right">
-    <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+<div style="max-width:1160px;margin:0 auto;padding:24px 32px 0;display:flex;justify-content:space-between;align-items:flex-start;">
+  <!-- BC logo flush left -->
+  <img src="bc_logo_final.svg" alt="BC" style="height:90px;width:auto;display:block;">
+  <!-- nav right -->
+  <div class="nav-right" style="padding-top:8px;">
+    <a href="https://www.instagram.com/biancacuriel/" target="_blank" title="Instagram">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
     </a>
     <a href="https://www.linkedin.com/in/bianca-c-b04116127" target="_blank" title="LinkedIn">
@@ -197,15 +199,12 @@ nav {
       </div>
     </a>
   </div>
-</nav>
+</div>
 
 <div class="page">
 
   <!-- LEFT -->
   <div class="left">
-
-    <!-- logo above card like Alex -->
-    <img src="bc_logo_final.svg" alt="BC" style="height:90px;width:auto;display:block;margin-bottom:8px;margin-top:16px;margin-left:0;">
 
     <!-- profile card -->
     <div class="profile-card">
