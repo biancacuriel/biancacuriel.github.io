@@ -31,24 +31,24 @@ body { font-family: var(--mono); background: var(--bg); color: var(--ink); font-
 /* ── NAV ── */
 nav {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 24px 40px 16px;
+  padding: 24px 32px 16px;
   background: var(--bg);
+  width: 100%;
 }
 .nav-logo { display: flex; align-items: center; text-decoration: none; }
 .nav-logo img { height: 110px; width: auto; }
 .nav-right { display: flex; align-items: center; gap: 20px; }
-.nav-right a { color: var(--muted); text-decoration: none; transition: color 0.15s; font-size: 12px; }
+.nav-right a { color: var(--muted); text-decoration: none; transition: color 0.15s; font-size: 13px; }
 .nav-right a:hover { color: var(--ink); }
-.nav-right svg { width: 20px; height: 20px; display: block; }
-.nav-cta { display: flex; align-items: center; gap: 8px; border: 1px solid var(--border); padding: 10px 20px; border-radius: 28px; background: var(--card); color: var(--ink) !important; font-size: 13px; font-family: var(--mono); }
+.nav-right svg { width: 28px; height: 28px; display: block; }
+.nav-cta { display: flex; align-items: center; gap: 10px; border: 1.5px solid var(--border); padding: 14px 24px; border-radius: 40px; background: var(--card); color: var(--ink) !important; font-size: 13px; font-family: var(--mono); white-space: nowrap; }
 .nav-cta:hover { background: var(--ink) !important; color: var(--bg) !important; }
-.nav-cta svg { width: 16px; height: 16px; }
 
 /* ── OUTER SHELL ── */
-.page { max-width: 1160px; margin: 0 auto; padding: 24px 32px 60px; display: grid; grid-template-columns: 1fr 320px; gap: 20px; align-items: start; }
+.page { max-width: 1160px; margin: 0 auto; padding: 0 32px 60px; display: grid; grid-template-columns: 1fr 320px; gap: 20px; align-items: start; }
 
 /* ── LEFT: PROFILE CARD + FEED ── */
-.left { display: flex; flex-direction: column; gap: 12px; }
+.left { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
 
 .profile-card {
   background: var(--card); border-radius: 16px;
@@ -184,7 +184,7 @@ nav {
   <div class="left">
 
     <!-- logo above card like Alex -->
-    <img src="bc_logo_final.svg" alt="BC" style="height:110px;width:auto;display:block;margin-bottom:20px;">
+    <img src="bc_logo_final.svg" alt="BC" style="height:90px;width:auto;display:block;margin-bottom:16px;margin-top:16px;margin-left:0;align-self:flex-start;">
 
     <!-- profile card -->
     <div class="profile-card">
@@ -310,14 +310,18 @@ nav {
           <div class="thumb prisca"><img src="prisca-ss23-05.jpg" alt=""></div>
           <div class="thumb prisca"><img src="prisca-ss23-06.jpg" alt=""></div>
           <div class="thumb prisca"><img src="prisca-ss23-07.jpg" alt=""></div>
-          <div class="thumb prisca"><img src="prisca-concept-01.jpg" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-ss23-08.jpg" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-ss23-09.jpg" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-ss23-010.jpg" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-ss23-011.jpg" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-ss23-012.jpg" alt=""></div>
         </div>
 
         <div class="cat">ss23 — shot by me</div>
         <div class="thumb-grid">
-          <div class="thumb prisca"><img src="prisca-ss23-shot-01.jpg" alt=""></div>
-          <div class="thumb prisca"><img src="prisca-ss23-shot-02.jpg" alt=""></div>
-          <div class="thumb prisca"><img src="prisca-ss23-shot-03.jpg" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-ss23-shot-01.JPG" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-ss23-shot-02.JPG" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-ss23-shot-03.JPG" alt=""></div>
         </div>
         <div class="tags"><span class="tag">fashion</span><span class="tag">editorial</span><span class="tag">campaign concept</span><span class="tag">feed curation</span><span class="tag">community</span></div>
       </div>
@@ -325,7 +329,7 @@ nav {
       <!-- SANTA CRUZ MAH -->
       <div class="post" style="animation-delay:0.15s">
         <div class="post-header">
-          <div class="post-logo"><img src="mah_logo.webp" alt="MAH" style="object-fit:contain;padding:5px;width:90%;height:90%"></div>
+          <div class="post-logo"><img src="mah_logo.webp" alt="MAH" style="object-fit:cover;width:100%;height:100%;padding:0"></div>
           <div class="post-meta">
             <div class="post-brand">santa cruz museum of art & history</div>
             <div class="post-sub">@santacruzmah · marketing coordinator</div>
@@ -442,7 +446,7 @@ nav {
           <div><div class="client-name">priscavera</div><div class="client-role">social media manager</div></div>
         </div>
         <div class="client">
-          <div class="client-logo"><img src="mah_logo.webp" alt="MAH" style="object-fit:contain;padding:5px;width:90%;height:90%"></div>
+          <div class="client-logo"><img src="mah_logo.webp" alt="MAH" style="object-fit:cover;width:100%;height:100%;padding:0"></div>
           <div><div class="client-name">santa cruz mah</div><div class="client-role">marketing coordinator</div></div>
         </div>
       </div>
