@@ -21,7 +21,6 @@
   --ink: #141414;
   --muted: #888;
   --border: rgba(0,0,0,0.1);
-  --border-thick: rgba(0,0,0,0.12);
   --mono: 'IoskeleyMono', monospace;
 }
 
@@ -51,7 +50,7 @@ nav {
 }
 .nav-cta:hover { background: var(--ink); border-color: var(--ink); }
 .nav-cta:hover .marquee-text { color: var(--bg); }
-.marquee-wrap { overflow: hidden; width: 100%; max-width: 100%; }
+.marquee-wrap { overflow: hidden; width: 100%; max-width: 100%; display: flex; align-items: center; justify-content: center; height: 100%; }
 .marquee-track { display: flex; width: max-content; animation: marquee 18s linear infinite; }
 .marquee-text { font-size: 12px; font-family: var(--mono); color: var(--ink); white-space: nowrap; padding-right: 32px; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
@@ -60,12 +59,12 @@ nav {
 .page { max-width: 1160px; margin: 0 auto; padding: 20px 32px 60px; display: grid; grid-template-columns: 1fr 320px; gap: 20px; align-items: start; overflow: hidden; }
 
 /* ── LEFT: PROFILE CARD + FEED ── */
-.left { display: flex; flex-direction: column; gap: 12px; align-items: stretch; width: 100%; }
+.left { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; width: 100%; }
 
 .profile-card {
   background: var(--card); border-radius: 16px;
   padding: 28px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: start;
-  border: 1.5px solid rgba(0,0,0,0.12);
+  border: 1.5px solid rgba(0,0,0,0.1); width: 100%;
 }
 .profile-avatar { width: 56px; height: 56px; border-radius: 50%; background: var(--ink); display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; color: var(--bg); margin-bottom: 14px; }
 .profile-name { font-size: 32px; font-weight: 700; margin-bottom: 4px; }
@@ -75,7 +74,7 @@ nav {
 .profile-photo-slot img { width: 100%; height: 100%; object-fit: cover; }
 
 /* feed tabs */
-.feed-tabs { display: flex; gap: 28px; border-bottom: 1px solid var(--border); padding: 0 4px; background: transparent; }
+.feed-tabs { display: flex; gap: 28px; border-bottom: 1px solid var(--border); padding: 0 4px; background: transparent; width: 100%; }
 .tab { font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; padding: 12px 0; border: none; background: none; cursor: pointer; color: var(--muted); border-bottom: 2px solid transparent; transition: all 0.15s; }
 .tab.active { color: var(--ink); border-bottom-color: var(--ink); }
 
@@ -86,7 +85,8 @@ nav {
   background: var(--card); border-radius: 12px;
   padding: 22px 24px; margin-bottom: 10px;
   animation: fadeUp 0.35s ease both;
-  border: 1.5px solid rgba(0,0,0,0.12);
+  border: 1.5px solid rgba(0,0,0,0.1);
+  width: 100%;
 }
 @keyframes fadeUp { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
 
@@ -106,7 +106,7 @@ nav {
 .metric-light { background: var(--bg); color: var(--ink); font-size: 11px; padding: 4px 12px; border-radius: 20px; border: 1px solid var(--border); }
 
 /* category label */
-.cat { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; color: var(--muted); margin: 16px 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.cat { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; color: var(--ink); margin: 16px 0 8px; padding-bottom: 6px; border-bottom: 1.5px solid rgba(0,0,0,0.1); width: 100%; }
 .cat.highlight { color: var(--ink); border-color: var(--ink); }
 
 /* thumb grid */
@@ -136,7 +136,7 @@ nav {
 .tag { font-size: 10px; padding: 3px 10px; border-radius: 20px; border: 1px solid var(--border); color: var(--muted); }
 
 /* about */
-.about-block { background: var(--card); border-radius: 12px; padding: 24px; margin-bottom: 10px; animation: fadeUp 0.3s ease both; border: 1.5px solid rgba(0,0,0,0.12); }
+.about-block { background: var(--card); border-radius: 12px; padding: 24px; margin-bottom: 10px; animation: fadeUp 0.3s ease both; border: 1.5px solid rgba(0,0,0,0.1); }
 .about-block p { font-size: 13px; line-height: 1.75; margin-bottom: 12px; }
 .about-block p:last-child { margin-bottom: 0; }
 .about-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 10px; }
@@ -145,7 +145,7 @@ nav {
 /* ── RIGHT SIDEBAR ── */
 .sidebar { display: flex; flex-direction: column; gap: 16px; position: sticky; top: 24px; overflow: hidden; width: 100%; min-width: 0; }
 
-.sidebar-card { background: var(--card); border-radius: 16px; padding: 22px; border: 1.5px solid rgba(0,0,0,0.12); }
+.sidebar-card { background: var(--card); border-radius: 16px; padding: 22px; border: 1.5px solid rgba(0,0,0,0.1); }
 .sidebar-title { font-size: 14px; font-weight: 700; margin-bottom: 16px; }
 
 .client-list { display: flex; flex-direction: column; gap: 10px; }
@@ -198,7 +198,7 @@ nav {
       <div>
         <div class="profile-name">bianca curiel</div>
         <div class="profile-handle">@biancacuriel</div>
-        <p class="profile-bio">social. brand. creative.<br>parsons-trained designer doing social media.<br>i make things that look good and perform better.</p>
+        <p class="profile-bio">social. brand. creative.<br>your brand's favorite parasocial relationship.<br>i make things that look good and perform better.</p>
       </div>
       <div class="profile-photo-slot"><img src="profile picture.jpeg" alt="Bianca Curiel"></div>
     </div>
