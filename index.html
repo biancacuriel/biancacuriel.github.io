@@ -30,11 +30,11 @@ body { font-family: var(--mono); background: var(--bg); color: var(--ink); font-
 /* ── NAV ── */
 nav {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 40px; height: 56px;
+  padding: 20px 40px 0;
   background: var(--bg);
 }
 .nav-logo { display: flex; align-items: center; text-decoration: none; }
-.nav-logo img { height: 40px; width: auto; }
+.nav-logo img { height: 80px; width: auto; }
 .nav-right { display: flex; align-items: center; gap: 28px; }
 .nav-right a { font-size: 12px; color: var(--muted); text-decoration: none; }
 .nav-right a:hover { color: var(--ink); }
@@ -76,8 +76,8 @@ nav {
 @keyframes fadeUp { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
 
 .post-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
-.post-logo { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg); display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
-.post-logo img { width: 100%; height: 100%; object-fit: contain; padding: 6px; }
+.post-logo { width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg); display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
+.post-logo img { width: 100%; height: 100%; object-fit: cover; padding: 0; }
 .post-meta { flex: 1; }
 .post-brand { font-size: 14px; font-weight: 700; }
 .post-sub { font-size: 11px; color: var(--muted); margin-top: 1px; }
@@ -135,8 +135,8 @@ nav {
 
 .client-list { display: flex; flex-direction: column; gap: 10px; }
 .client { display: flex; align-items: center; gap: 12px; }
-.client-logo { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg); display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
-.client-logo img { width: 100%; height: 100%; object-fit: contain; padding: 5px; }
+.client-logo { width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg); display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
+.client-logo img { width: 100%; height: 100%; object-fit: cover; padding: 0; }
 .client-name { font-size: 12px; font-weight: 700; }
 .client-role { font-size: 10px; color: var(--muted); margin-top: 1px; }
 
@@ -161,7 +161,7 @@ nav {
 <body>
 
 <nav>
-  <a class="nav-logo" href="#"><img src="bc_logo_v5.svg" alt="BC"></a>
+  <a class="nav-logo" href="#"><img src="bc_logo_final.svg" alt="BC"></a>
   <div class="nav-right">
     <a href="#" onclick="showTab('projects',document.querySelectorAll('.tab')[0]);return false">work</a>
     <a href="#" onclick="showTab('about',document.querySelectorAll('.tab')[1]);return false">about</a>
@@ -177,7 +177,6 @@ nav {
     <!-- profile card -->
     <div class="profile-card">
       <div>
-        <div class="profile-avatar">bc</div>
         <div class="profile-name">bianca curiel</div>
         <div class="profile-handle">@bianca.curiel</div>
         <p class="profile-bio">social. brand. creative.<br>parsons-trained designer doing social media.<br>i make things that look good and perform better.</p>
@@ -198,7 +197,7 @@ nav {
       <div class="post" style="animation-delay:0s">
         <p style="font-size:13px;color:var(--muted);margin-bottom:4px">@biancacuriel</p>
         <p style="font-size:14px;font-weight:700;margin-bottom:8px">welcome to my portfolio.</p>
-        <p style="font-size:13px;line-height:1.7">these past projects span social strategy, creative direction, photography, design, and ai-generated content.<br>every link goes to real, live work. click through.</p>
+        <p style="font-size:13px;line-height:1.7">these past projects span social strategy, creative direction, photography, design, and ai-generated content.</p>
       </div>
 
       <!-- KOA -->
@@ -269,7 +268,7 @@ nav {
       <!-- PRISCAVERA -->
       <div class="post" style="animation-delay:0.1s">
         <div class="post-header">
-          <div class="post-logo" style="background:#18141e"><img src="PRISCAVera-Logo-Black.png" alt="Priscavera" style="filter:invert(1)"></div>
+          <div class="post-logo" style="background:#18141e"><img src="PRISCAVera-Logo-Black.png" alt="Priscavera" style="filter:invert(1);object-fit:contain;padding:8px"></div>
           <div class="post-meta">
             <div class="post-brand">priscavera</div>
             <div class="post-sub">@priscavera · social media manager</div>
@@ -338,7 +337,7 @@ nav {
       <!-- VOCAL -->
       <div class="post" style="animation-delay:0.2s">
         <div class="post-header">
-          <div class="post-logo" style="background:#141414"><img src="vocal.webp" alt="Vocal" style="filter:invert(1)"></div>
+          <div class="post-logo" style="background:#141414"><img src="vocal.webp" alt="Vocal" style="filter:invert(1);object-fit:contain;padding:8px"></div>
           <div class="post-meta">
             <div class="post-brand">vocal media</div>
             <div class="post-sub">@vocalmedia · social media manager</div>
@@ -357,7 +356,7 @@ nav {
       <!-- SUNSTONE -->
       <div class="post" style="animation-delay:0.25s">
         <div class="post-header">
-          <div class="post-logo"><img src="SUNSTONE_vertical-LOGO_Color_1.webp" alt="Sunstone"></div>
+          <div class="post-logo"><img src="SUNSTONE_vertical-LOGO_Color_1.webp" alt="Sunstone" style="object-fit:contain;padding:4px"></div>
           <div class="post-meta">
             <div class="post-brand">sunstone strategies</div>
             <div class="post-sub">@sunstonerategies · digital content & design consultant</div>
@@ -408,11 +407,11 @@ nav {
       <div class="sidebar-title">clients & teams</div>
       <div class="client-list">
         <div class="client">
-          <div class="client-logo" style="background:#141414"><img src="vocal.webp" alt="Vocal" style="filter:invert(1)"></div>
+          <div class="client-logo" style="background:#141414"><img src="vocal.webp" alt="Vocal" style="filter:invert(1);object-fit:contain;padding:8px"></div>
           <div><div class="client-name">vocal media</div><div class="client-role">social media manager</div></div>
         </div>
         <div class="client">
-          <div class="client-logo"><img src="SUNSTONE_vertical-LOGO_Color_1.webp" alt="Sunstone"></div>
+          <div class="client-logo"><img src="SUNSTONE_vertical-LOGO_Color_1.webp" alt="Sunstone" style="object-fit:contain;padding:4px"></div>
           <div><div class="client-name">sunstone strategies</div><div class="client-role">content & design consultant</div></div>
         </div>
         <div class="client">
@@ -420,7 +419,7 @@ nav {
           <div><div class="client-name">koa skincare</div><div class="client-role">growth analyst</div></div>
         </div>
         <div class="client">
-          <div class="client-logo" style="background:#18141e"><img src="PRISCAVera-Logo-Black.png" alt="Priscavera" style="filter:invert(1)"></div>
+          <div class="client-logo" style="background:#18141e"><img src="PRISCAVera-Logo-Black.png" alt="Priscavera" style="filter:invert(1);object-fit:contain;padding:8px"></div>
           <div><div class="client-name">priscavera</div><div class="client-role">social media manager</div></div>
         </div>
         <div class="client">
