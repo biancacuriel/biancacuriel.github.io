@@ -36,15 +36,13 @@ nav {
 }
 .nav-logo { display: flex; align-items: center; text-decoration: none; }
 .nav-logo img { height: 110px; width: auto; }
-.nav-center { display: flex; align-items: center; gap: 28px; }
-.nav-center a { color: var(--muted); text-decoration: none; transition: color 0.15s; }
-.nav-center a:hover { color: var(--ink); }
-.nav-center svg { width: 22px; height: 22px; }
-.nav-right { display: flex; align-items: center; gap: 28px; }
-.nav-right a { font-size: 12px; color: var(--muted); text-decoration: none; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-right a { color: var(--muted); text-decoration: none; transition: color 0.15s; font-size: 12px; }
 .nav-right a:hover { color: var(--ink); }
-.nav-cta { border: 1px solid var(--border); padding: 7px 16px; border-radius: 24px; background: var(--card); color: var(--ink) !important; font-size: 12px; }
+.nav-right svg { width: 20px; height: 20px; display: block; }
+.nav-cta { display: flex; align-items: center; gap: 8px; border: 1px solid var(--border); padding: 10px 20px; border-radius: 28px; background: var(--card); color: var(--ink) !important; font-size: 13px; font-family: var(--mono); }
 .nav-cta:hover { background: var(--ink) !important; color: var(--bg) !important; }
+.nav-cta svg { width: 16px; height: 16px; }
 
 /* ── OUTER SHELL ── */
 .page { max-width: 1160px; margin: 0 auto; padding: 24px 32px 60px; display: grid; grid-template-columns: 1fr 320px; gap: 20px; align-items: start; }
@@ -161,22 +159,25 @@ nav {
   nav { padding: 0 16px; }
   .page { padding: 16px; }
 }
+.twinkle { display: inline-block; width: 8px; height: 8px; background: #F5EF5A; border-radius: 50%; margin-left: 5px; vertical-align: middle; animation: twinkle 1.5s ease-in-out infinite; }
+@keyframes twinkle { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(0.6); } }
 </style>
 </head>
 <body>
 
 <nav>
   <a class="nav-logo" href="#"><img src="bc_logo_final.svg" alt="BC"></a>
-  <div class="nav-center">
+  <div class="nav-right">
     <a href="https://www.instagram.com/" target="_blank" title="Instagram">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
     </a>
     <a href="https://www.linkedin.com/in/bianca-c-b04116127" target="_blank" title="LinkedIn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="3"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8.5"/><path d="M12 16v-5M16 16v-3a2 2 0 0 0-4 0"/></svg>
     </a>
-  </div>
-  <div class="nav-right">
-    <a href="mailto:bianca.a.curiel@gmail.com" class="nav-cta">want to work with me? let's chat :)</a>
+    <a href="mailto:bianca.a.curiel@gmail.com" class="nav-cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+      want to work with me? let's chat :)
+    </a>
   </div>
 </nav>
 
@@ -295,21 +296,28 @@ nav {
 
         <div class="cat">shot by me — editorial</div>
         <div class="thumb-grid">
-          <div class="thumb prisca"><span class="thumb-label">edit 01</span></div>
-          <div class="thumb prisca"><span class="thumb-label">edit 02</span></div>
-          <div class="thumb prisca"><span class="thumb-label">edit 03</span></div>
+          <div class="thumb prisca"><img src="prisca-edit-01.jpg" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-edit-02.jpg" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-edit-03.jpg" alt=""></div>
         </div>
 
         <div class="cat">ss23 — concept & execution by me</div>
         <div class="thumb-grid">
-          <div class="thumb prisca"><span class="thumb-label">ss23 01</span></div>
-          <div class="thumb prisca"><span class="thumb-label">ss23 02</span></div>
-          <div class="thumb prisca"><span class="thumb-label">ss23 03</span></div>
-          <div class="thumb prisca"><span class="thumb-label">ss23 04</span></div>
-          <div class="thumb prisca"><span class="thumb-label">ss23 05</span></div>
-          <div class="thumb prisca"><span class="thumb-label">ss23 06</span></div>
-          <div class="thumb prisca"><span class="thumb-label">ss23 07</span></div>
-          <div class="thumb prisca"><span class="thumb-label">concept</span></div>
+          <div class="thumb prisca"><img src="prisca-ss23-01.jpg" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-ss23-02.jpg" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-ss23-03.jpg" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-ss23-04.jpg" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-ss23-05.jpg" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-ss23-06.jpg" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-ss23-07.jpg" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-concept-01.jpg" alt=""></div>
+        </div>
+
+        <div class="cat">ss23 — shot by me</div>
+        <div class="thumb-grid">
+          <div class="thumb prisca"><img src="prisca-ss23-shot-01.jpg" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-ss23-shot-02.jpg" alt=""></div>
+          <div class="thumb prisca"><img src="prisca-ss23-shot-03.jpg" alt=""></div>
         </div>
         <div class="tags"><span class="tag">fashion</span><span class="tag">editorial</span><span class="tag">campaign concept</span><span class="tag">feed curation</span><span class="tag">community</span></div>
       </div>
@@ -317,7 +325,7 @@ nav {
       <!-- SANTA CRUZ MAH -->
       <div class="post" style="animation-delay:0.15s">
         <div class="post-header">
-          <div class="post-logo"><img src="mah_logo.webp" alt="MAH"></div>
+          <div class="post-logo"><img src="mah_logo.webp" alt="MAH" style="object-fit:contain;padding:2px"></div>
           <div class="post-meta">
             <div class="post-brand">santa cruz museum of art & history</div>
             <div class="post-sub">@santacruzmah · marketing coordinator</div>
@@ -350,7 +358,7 @@ nav {
         <div class="post-header">
           <div class="post-logo" style="background:#141414"><img src="vocal.webp" alt="Vocal" style="filter:invert(1);object-fit:contain;padding:8px"></div>
           <div class="post-meta">
-            <div class="post-brand">vocal media</div>
+            <div class="post-brand">vocal media<span class="twinkle"></span></div>
             <div class="post-sub">@vocalmedia · social media manager</div>
           </div>
           <div class="post-date">oct 2025 – present</div>
@@ -369,7 +377,7 @@ nav {
         <div class="post-header">
           <div class="post-logo"><img src="SUNSTONE_vertical-LOGO_Color_1.webp" alt="Sunstone" style="object-fit:contain;padding:4px"></div>
           <div class="post-meta">
-            <div class="post-brand">sunstone strategies</div>
+            <div class="post-brand">sunstone strategies<span class="twinkle"></span></div>
             <div class="post-sub">@sunstonerategies · digital content & design consultant</div>
           </div>
           <div class="post-date">jun 2025 – present</div>
@@ -419,11 +427,11 @@ nav {
       <div class="client-list">
         <div class="client">
           <div class="client-logo" style="background:#141414"><img src="vocal.webp" alt="Vocal" style="filter:invert(1);object-fit:contain;padding:8px"></div>
-          <div><div class="client-name">vocal media</div><div class="client-role">social media manager</div></div>
+          <div><div class="client-name">vocal media<span class="twinkle"></span></div><div class="client-role">social media manager</div></div>
         </div>
         <div class="client">
           <div class="client-logo"><img src="SUNSTONE_vertical-LOGO_Color_1.webp" alt="Sunstone" style="object-fit:contain;padding:4px"></div>
-          <div><div class="client-name">sunstone strategies</div><div class="client-role">content & design consultant</div></div>
+          <div><div class="client-name">sunstone strategies<span class="twinkle"></span></div><div class="client-role">content & design consultant</div></div>
         </div>
         <div class="client">
           <div class="client-logo"><img src="ICON_SUN.png" alt="Koa"></div>
@@ -434,7 +442,7 @@ nav {
           <div><div class="client-name">priscavera</div><div class="client-role">social media manager</div></div>
         </div>
         <div class="client">
-          <div class="client-logo"><img src="mah_logo.webp" alt="MAH"></div>
+          <div class="client-logo"><img src="mah_logo.webp" alt="MAH" style="object-fit:contain;padding:2px"></div>
           <div><div class="client-name">santa cruz mah</div><div class="client-role">marketing coordinator</div></div>
         </div>
       </div>
