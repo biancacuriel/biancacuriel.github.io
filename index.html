@@ -30,8 +30,8 @@ body { font-family: var(--mono); background: var(--bg); color: var(--ink); font-
 
 /* ── NAV ── */
 nav {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 24px 32px 16px;
+  display: flex; align-items: center; justify-content: flex-end;
+  padding: 24px 32px 0;
   background: var(--bg);
   width: 100%;
 }
@@ -41,14 +41,25 @@ nav {
 .nav-right a { color: var(--muted); text-decoration: none; transition: color 0.15s; font-size: 13px; }
 .nav-right a:hover { color: var(--ink); }
 .nav-right svg { width: 28px; height: 28px; display: block; }
-.nav-cta { display: flex; align-items: center; gap: 10px; border: 1.5px solid var(--border); padding: 14px 24px; border-radius: 40px; background: var(--card); color: var(--ink) !important; font-size: 13px; font-family: var(--mono); white-space: nowrap; }
-.nav-cta:hover { background: var(--ink) !important; color: var(--bg) !important; }
+.nav-cta { 
+  display: flex; align-items: center; 
+  border: 1.5px solid var(--border); 
+  border-radius: 40px; background: var(--card); 
+  overflow: hidden; width: 280px; height: 48px;
+  cursor: pointer; text-decoration: none;
+}
+.nav-cta:hover { background: var(--ink); border-color: var(--ink); }
+.nav-cta:hover .marquee-text { color: var(--bg); }
+.marquee-wrap { overflow: hidden; width: 100%; }
+.marquee-track { display: flex; width: max-content; animation: marquee 8s linear infinite; }
+.marquee-text { font-size: 13px; font-family: var(--mono); color: var(--ink); white-space: nowrap; padding-right: 40px; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* ── OUTER SHELL ── */
 .page { max-width: 1160px; margin: 0 auto; padding: 0 32px 60px; display: grid; grid-template-columns: 1fr 320px; gap: 20px; align-items: start; }
 
 /* ── LEFT: PROFILE CARD + FEED ── */
-.left { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.left { display: flex; flex-direction: column; gap: 12px; align-items: stretch; }
 
 .profile-card {
   background: var(--card); border-radius: 16px;
@@ -174,7 +185,16 @@ nav {
     <a href="https://www.linkedin.com/in/bianca-c-b04116127" target="_blank" title="LinkedIn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="3"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8.5"/><path d="M12 16v-5M16 16v-3a2 2 0 0 0-4 0"/></svg>
     </a>
-    <a href="mailto:bianca.a.curiel@gmail.com" class="nav-cta">want to work with me? let's chat :)</a>
+    <a href="mailto:bianca.a.curiel@gmail.com" class="nav-cta">
+      <div class="marquee-wrap">
+        <div class="marquee-track">
+          <span class="marquee-text">want to work with me? let's chat :)</span>
+          <span class="marquee-text">want to work with me? let's chat :)</span>
+          <span class="marquee-text">want to work with me? let's chat :)</span>
+          <span class="marquee-text">want to work with me? let's chat :)</span>
+        </div>
+      </div>
+    </a>
   </div>
 </nav>
 
@@ -184,7 +204,7 @@ nav {
   <div class="left">
 
     <!-- logo above card like Alex -->
-    <img src="bc_logo_final.svg" alt="BC" style="height:90px;width:auto;display:block;margin-bottom:16px;margin-top:16px;margin-left:0;align-self:flex-start;">
+    <img src="bc_logo_final.svg" alt="BC" style="height:90px;width:auto;display:block;margin-bottom:8px;margin-top:16px;margin-left:0;">
 
     <!-- profile card -->
     <div class="profile-card">
@@ -230,20 +250,6 @@ nav {
         </div>
         <p class="post-body">3 years managing campaigns end-to-end, directing shoots, designing graphics, and pioneering generative ai content for the brand. this is where strategy met craft.</p>
 
-        <div class="cat">campaign & influencer strategy</div>
-        <div class="thumb-grid">
-          <div class="thumb koa"><img src="koa-post-01.jpg" alt=""></div>
-          <div class="thumb koa"><img src="koa-post-02.jpg" alt=""></div>
-          <div class="thumb koa"><img src="koa-post-03.jpg" alt=""></div>
-        </div>
-
-        <div class="cat">designed by me</div>
-        <div class="thumb-grid">
-          <div class="thumb koa"><video src="koa-design-01.mp4" autoplay muted loop playsinline></video></div>
-          <div class="thumb koa"><img src="koa-design-02.jpg" alt=""></div>
-          <div class="thumb koa"><img src="koa-design-03.jpg" alt=""></div>
-        </div>
-
         <div class="cat">shot & directed by me</div>
         <div class="thumb-grid" style="grid-template-columns:repeat(4,1fr)">
           <div class="thumb koa"><video src="koa-shoot-01.mp4" autoplay muted loop playsinline></video></div>
@@ -259,6 +265,20 @@ nav {
           <div class="thumb koa"><img src="koa-shoot-07.jpg" alt=""></div>
           <div class="thumb koa"><img src="koa-shoot-08.jpg" alt=""></div>
           <div class="thumb koa"><img src="koa-shoot-09.jpg" alt=""></div>
+        </div>
+
+        <div class="cat">campaign & influencer strategy</div>
+        <div class="thumb-grid">
+          <div class="thumb koa"><img src="koa-post-01.jpg" alt=""></div>
+          <div class="thumb koa"><img src="koa-post-02.jpg" alt=""></div>
+          <div class="thumb koa"><img src="koa-post-03.jpg" alt=""></div>
+        </div>
+
+        <div class="cat">designed by me</div>
+        <div class="thumb-grid">
+          <div class="thumb koa"><video src="koa-design-01.mp4" autoplay muted loop playsinline></video></div>
+          <div class="thumb koa"><img src="koa-design-02.jpg" alt=""></div>
+          <div class="thumb koa"><img src="koa-design-03.jpg" alt=""></div>
         </div>
 
         <div class="cat highlight">generative ai conception — by me</div>
