@@ -45,21 +45,22 @@ nav {
   display: flex; align-items: center; 
   border: 1.5px solid var(--border); 
   border-radius: 40px; background: var(--card); 
-  overflow: hidden; width: 280px; height: 48px;
+  overflow: hidden; width: 260px; height: 46px;
   cursor: pointer; text-decoration: none;
+  flex-shrink: 0;
 }
 .nav-cta:hover { background: var(--ink); border-color: var(--ink); }
 .nav-cta:hover .marquee-text { color: var(--bg); }
 .marquee-wrap { overflow: hidden; width: 100%; }
-.marquee-track { display: flex; width: max-content; animation: marquee 8s linear infinite; }
-.marquee-text { font-size: 13px; font-family: var(--mono); color: var(--ink); white-space: nowrap; padding-right: 40px; }
+.marquee-track { display: flex; width: max-content; animation: marquee 18s linear infinite; }
+.marquee-text { font-size: 12px; font-family: var(--mono); color: var(--ink); white-space: nowrap; padding-right: 32px; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* ── OUTER SHELL ── */
 .page { max-width: 1160px; margin: 0 auto; padding: 0 32px 60px; display: grid; grid-template-columns: 1fr 320px; gap: 20px; align-items: start; }
 
 /* ── LEFT: PROFILE CARD + FEED ── */
-.left { display: flex; flex-direction: column; gap: 12px; align-items: stretch; }
+.left { display: flex; flex-direction: column; gap: 12px; align-items: stretch; width: 100%; }
 
 .profile-card {
   background: var(--card); border-radius: 16px;
@@ -349,7 +350,7 @@ nav {
       <!-- SANTA CRUZ MAH -->
       <div class="post" style="animation-delay:0.15s">
         <div class="post-header">
-          <div class="post-logo"><img src="mah_logo.webp" alt="MAH" style="object-fit:cover;width:100%;height:100%;padding:0"></div>
+          <div class="post-logo"><img src="mah_logo.webp" alt="MAH" style="object-fit:cover;width:100%;height:100%;padding:0;mix-blend-mode:multiply"></div>
           <div class="post-meta">
             <div class="post-brand">santa cruz museum of art & history</div>
             <div class="post-sub">@santacruzmah · marketing coordinator</div>
@@ -466,7 +467,7 @@ nav {
           <div><div class="client-name">priscavera</div><div class="client-role">social media manager</div></div>
         </div>
         <div class="client">
-          <div class="client-logo"><img src="mah_logo.webp" alt="MAH" style="object-fit:cover;width:100%;height:100%;padding:0"></div>
+          <div class="client-logo"><img src="mah_logo.webp" alt="MAH" style="object-fit:cover;width:100%;height:100%;padding:0;mix-blend-mode:multiply"></div>
           <div><div class="client-name">santa cruz mah</div><div class="client-role">marketing coordinator</div></div>
         </div>
       </div>
