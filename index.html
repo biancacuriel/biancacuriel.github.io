@@ -45,11 +45,15 @@ nav {
   border: 1.5px solid var(--border); 
   border-radius: 40px; background: var(--card); 
   height: 46px; cursor: pointer; text-decoration: none;
-  box-sizing: border-box; padding: 0 20px;
+  box-sizing: border-box; overflow: hidden;
   font-size: 12px; font-family: var(--mono); color: var(--ink);
-  white-space: nowrap;
 }
 .nav-cta:hover { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.nav-cta:hover .marquee-text { color: var(--bg); }
+.marquee-wrap { overflow: hidden; width: 100%; }
+.marquee-track { display: flex; width: max-content; animation: marquee 18s linear infinite; }
+.marquee-text { font-size: 12px; font-family: var(--mono); color: var(--ink); white-space: nowrap; padding: 0 24px; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* ── OUTER SHELL ── */
 .page { max-width: 1160px; margin: 0 auto; padding: 20px 32px 60px; display: grid; grid-template-columns: 1fr 320px; gap: 20px; align-items: start; overflow: hidden; }
@@ -432,7 +436,14 @@ nav {
     <!-- pill at top of sidebar, aligned with logo -->
     <div style="padding:24px 0 0;width:100%;min-width:0;overflow:hidden;">
       <a href="mailto:bianca.a.curiel@gmail.com" class="nav-cta">
-        want to work with me? let's chat (⸝⸝> ᴗ•⸝⸝)
+        <div class="marquee-wrap">
+          <div class="marquee-track">
+            <span class="marquee-text">want to work with me? let's chat (⸝⸝> ᴗ•⸝⸝)</span>
+            <span class="marquee-text">want to work with me? let's chat (⸝⸝> ᴗ•⸝⸝)</span>
+            <span class="marquee-text">want to work with me? let's chat (⸝⸝> ᴗ•⸝⸝)</span>
+            <span class="marquee-text">want to work with me? let's chat (⸝⸝> ᴗ•⸝⸝)</span>
+          </div>
+        </div>
       </a>
     </div>
     <div class="sidebar-card">
