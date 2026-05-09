@@ -46,9 +46,9 @@ nav {
   border-radius: 40px; background: var(--card); 
   height: 46px; cursor: pointer; text-decoration: none;
   box-sizing: border-box; overflow: hidden;
-  font-size: 12px; font-family: var(--mono); color: var(--ink);
+  width: 100%; max-width: 100%;
 }
-.nav-cta:hover { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.nav-cta:hover { background: var(--ink); border-color: var(--ink); }
 .nav-cta:hover .marquee-text { color: var(--bg); }
 .marquee-wrap { overflow: hidden; width: 100%; }
 .marquee-track { display: flex; width: max-content; animation: marquee 18s linear infinite; }
@@ -177,11 +177,11 @@ nav {
 </head>
 <body>
 
-<!-- header row: logo left, pill + icons right — matches page grid exactly -->
-<div style="max-width:1160px;margin:0 auto;padding:24px 32px 16px;display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:center;box-sizing:border-box;">
-  <div style="display:flex;align-items:center;justify-content:space-between;">
-    <img src="bc_logo_final.svg" alt="BC" style="height:90px;width:auto;display:block;">
-    <div style="display:flex;align-items:center;gap:14px;">
+<!-- header row -->
+<div style="max-width:1160px;margin:0 auto;padding:24px 32px 16px;box-sizing:border-box;display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:center;">
+  <div style="display:flex;align-items:center;justify-content:space-between;min-width:0;">
+    <img src="bc_logo_final.svg" alt="BC" style="height:90px;width:auto;display:block;flex-shrink:0;">
+    <div style="display:flex;align-items:center;gap:14px;flex-shrink:0;">
       <a href="https://www.instagram.com/biancacuriel/" target="_blank" style="color:var(--muted);text-decoration:none;">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
       </a>
@@ -190,8 +190,8 @@ nav {
       </a>
     </div>
   </div>
-  <div style="overflow:hidden;">
-    <a href="mailto:bianca.a.curiel@gmail.com" class="nav-cta" style="width:100%;display:flex;">
+  <div style="min-width:0;overflow:hidden;">
+    <a href="mailto:bianca.a.curiel@gmail.com" class="nav-cta" style="width:100%;">
       <div class="marquee-wrap">
         <div class="marquee-track">
           <span class="marquee-text">want to work with me? let's chat (⸝⸝> ᴗ•⸝⸝)</span>
@@ -368,14 +368,12 @@ nav {
 
         <div class="cat">concept & photography by me</div>
         <div class="thumb-grid">
-          <div class="thumb mah"><span class="thumb-label">concept 01</span></div>
-          <div class="thumb mah"><span class="thumb-label">photo 01</span></div>
-          <div class="thumb mah"><span class="thumb-label">photo 02</span></div>
-          <div class="thumb mah"><span class="thumb-label">photo 03</span></div>
-          <div class="thumb mah"><span class="thumb-label">shoot 01</span></div>
-          <div class="thumb mah"><span class="thumb-label">shoot 02</span></div>
-          <div class="thumb mah"><span class="thumb-label">concept + shoot 01</span></div>
-          <div class="thumb mah"><span class="thumb-label">concept + shoot 02</span></div>
+          <div class="thumb mah"><img src="mah-01.jpg" alt=""></div>
+          <div class="thumb mah"><img src="mah-02.jpg" alt=""></div>
+          <div class="thumb mah"><img src="mah-03.jpg" alt=""></div>
+          <div class="thumb mah"><video src="mah-04.mp4" autoplay muted loop playsinline></video></div>
+          <div class="thumb mah"><img src="mah-05.jpg" alt=""></div>
+          <div class="thumb mah"><img src="mah-06.jpg" alt=""></div>
         </div>
         <div class="tags"><span class="tag">cultural institution</span><span class="tag">photography</span><span class="tag">geo-targeting</span><span class="tag">paid social</span></div>
       </div>
