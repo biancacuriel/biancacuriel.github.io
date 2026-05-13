@@ -170,6 +170,12 @@ nav {
   .sidebar { position: static; }
   nav { padding: 0 16px; }
   .page { padding: 16px; }
+  .header-row { grid-template-columns: 1fr !important; gap: 12px !important; padding: 16px 16px 8px !important; }
+  .profile-card { grid-template-columns: 1fr !important; }
+  .profile-photo-slot { width: 80px !important; height: 80px !important; }
+  .profile-name { font-size: 24px; }
+  .post-date { font-size: 10px; }
+  .thumb-grid[style] { grid-template-columns: repeat(3,1fr) !important; }
 }
 .twinkle { display: inline-block; width: 8px; height: 8px; background: #22c55e; border-radius: 50%; margin-left: 5px; vertical-align: middle; animation: twinkle 1.5s ease-in-out infinite; }
 @keyframes twinkle { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(0.6); } }
@@ -178,7 +184,7 @@ nav {
 <body>
 
 <!-- header row -->
-<div style="max-width:1160px;margin:0 auto;padding:24px 32px 16px;box-sizing:border-box;display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:center;">
+<div class="header-row" style="max-width:1160px;margin:0 auto;padding:24px 32px 16px;box-sizing:border-box;display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:center;">
   <div style="display:flex;align-items:center;justify-content:space-between;min-width:0;">
     <img src="bc_logo_final.svg" alt="BC" style="height:90px;width:auto;display:block;flex-shrink:0;">
     <div style="display:flex;align-items:center;gap:14px;flex-shrink:0;">
